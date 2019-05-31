@@ -9,7 +9,7 @@ body {
     /* The image used */
     background-color: lightcoral;
     /* Used if the image is unavailable */
-    height: 100vh;
+    min-height: 100%;
     /* You must set a specified height */
     background-position: center;
     /* Center the image */
@@ -19,13 +19,18 @@ body {
     /* Resize the background image to cover the entire container */
 }
 
+.para{
+    font-size: 1.3em
+}
+
 /* overlay effect here */
+
 .wrapper {
-    position: fixed;
+    /* position: fixed; */
     /* Sit on top of the page content */
     width: 100%;
     /* Full width (cover the whole page) */
-    height: 100%;
+    min-height: 100vh;
     /* Full height (cover the whole page) */
     top: 0;
     left: 0;
