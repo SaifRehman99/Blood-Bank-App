@@ -13,6 +13,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+//   getting the firebase auth services
+const auth = firebase.auth();
+
 
 
 
