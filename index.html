@@ -15,7 +15,7 @@
 
     <!-- Custom Css here -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Google fonts here -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" rel="stylesheet">
 
@@ -24,7 +24,7 @@
 
 <body>
     <!-- starting from here -->
-    <div class="wrapper text-white">
+    <div class="wrapper text-white ">
         <!-- ============================Navbar Here========================================================-->
 
         <nav class="navbar navbar-light bg-danger">
@@ -34,57 +34,108 @@
 
             <!-- Login and SignUp here -->
             <div id="authButtons">
-                <button class="btn btn-secondary" id="loginBtn">Login</button>
-                <button class="btn btn-secondary" id="LogoutBtn ">Signup</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#LoginModal">LogIn</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#SignUpModal">SignUp</button>
             </div>
 
-        </nav>
 
+            <!-- ========================================LoginModal======================================== -->
+            <div class="modal fade text-dark" id="LoginModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">LogIn Donar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">LogIn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+             <!-- ========================================SignUpModal======================================== -->
+             <div class="modal fade text-dark " id="SignUpModal">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">SignUp Donar</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Create Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </nav>
         <!-- ==============Content Material Here================ -->
         <div class="container text-center mt-5 p-3 introSection">
             <div class="row">
                 <div class="col-lg-12 col-md-6 col-sm-12">
-                    <h1 class="mt-4 display-4 font-weight-bold heading">Facts About Blood and Blood Types</h1>
+                    <h1 class=" mt-4 display-4 font-weight-bold heading">Facts About Blood and Blood Types</h1>
                     <p class="mt-5 text-justify para">Blood types are determined by the presence or absence of certain
                         antigens – substances that can
                         trigger an immune response if they are foreign to the body. Since some antigens can trigger a
                         patient's immune system to attack the transfused blood, safe blood transfusions depend on
                         careful blood typing and cross-matching.</p>
-                    </div>
+                </div>
 
-                    <div class="col-lg-12 col-md-6 col-sm-12">
+                <div class="col-lg-12 col-md-6 col-sm-12">
                     <h1 class="mt-5 display-4 font-weight-bold heading">Blood groups</h1>
-                    <p class="para mt-5 font-weight-bold">There are four main blood groups (types of blood) – A, B, AB and O. Your blood group is
+                    <p class="para mt-5 font-weight-bold">There are four main blood groups (types of blood) – A, B, AB
+                        and O. Your blood group is
                         determined by the genes you inherit from your parents.</p>
-                    </div>
+                </div>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <h1 class="mt-4 display-4 font-weight-bold heading">The ABO system</h1>
-                        <p class="para mt-5">There are four main blood groups defined by the ABO system:</p>
-                        <ul class="list-group text-dark p-5">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                  Blood Group A
-                                  <span class="badge badge-primary badge-pill">A</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Blood Group B
-                                  <span class="badge badge-primary badge-pill">B</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Blood Group O
-                                  <span class="badge badge-primary badge-pill">O</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Blood Group AB
-                                        <span class="badge badge-primary badge-pill">AB</span>
-                                      </li>
-                              </ul>
-                    </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h1 class="mt-4 display-4 font-weight-bold heading">The ABO system</h1>
+                    <p class="para mt-5">There are four main blood groups defined by the ABO system:</p>
+                    <ul class="list-group text-dark p-5">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Blood Group A
+                            <span class="badge badge-primary badge-pill">A</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Blood Group B
+                            <span class="badge badge-primary badge-pill">B</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Blood Group O
+                            <span class="badge badge-primary badge-pill">O</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Blood Group AB
+                            <span class="badge badge-primary badge-pill">AB</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
 
+    <!-- =========================Firebase Here================================== -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <!-- =====================Firebase Auth Here================================= -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-auth.js"></script>
+    <!-- ==================Firebase Firestore Here=============================== -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
 
     <!-- Font Awesome here -->
     <script src="https://kit.fontawesome.com/ec2f5d14f1.js"></script>
@@ -100,5 +151,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+<script src="scripts/app.js"></script>
+<script src="scripts/auth.js"></script>
 
 </html>
