@@ -1,9 +1,21 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif !important
+    font-family: 'Lato', sans-serif ;
 }
-body{
-    
+
+body {
+    background-image: url("/img/1.jpg");
+    /* The image used */
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+    height: 500px;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 }
