@@ -14,3 +14,11 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
+
+
+//=============================================Getting Refrences Here=============================================//
+const logEmail = document.querySelector('#loginEmail');
+const logPass = document.querySelector('#loginPass');
+const sigEmail = document.querySelector('#signupEmail');
+const sigPass = document.querySelector('#signupPass');
+const donarRes = document.querySelector('#results');
