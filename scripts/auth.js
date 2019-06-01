@@ -50,15 +50,20 @@ signupForm.addEventListener('submit', (e) => {
     }
     else {
 
+
+
         // creating account in firebase now
         auth.createUserWithEmailAndPassword(signEmail, signPass)
-            .then(res => alertMessage('User Registered..!', 'alert-success'))
+            .then(res => {
+                alertMessage('User Registered..!', 'alert-success')
+
+                // loading the window
+                setTimeout(() => {
+                    location.assign('index.html');
+                }, 3000);
+            })
             .catch(rej => alertMessage(rej.message, 'alert-danger'));
 
-        // loading the window
-        setTimeout(() => {
-            location.assign('index.html');
-        }, 3000);
     }
 
 })
@@ -71,13 +76,8 @@ signupForm.addEventListener('submit', (e) => {
 const alertMessage = (txt, cls) => {
 
     // getting the parent reference here
-    const parent = document.querySelector('.parent');
-
-    // adding before this class
-    const before = document.querySelector('.child');
-
-    // creating div here
-    const div = document.createElement('div');
+    const parent = document.querySelector('#alertMessage');
+    const parent1 = document.querySelector('#alertMessage1');
 
     // creating para here
     const parag = document.createElement('p');
@@ -89,10 +89,8 @@ const alertMessage = (txt, cls) => {
     parag.textContent = txt;
 
     // appending para here
-    div.appendChild(parag);
+    parent.appendChild(parag);
 
-    // inserting div here
-    parent.insertBefore(div, before);
 
     // removing the class here
     setTimeout(() => {
