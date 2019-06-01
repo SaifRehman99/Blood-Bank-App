@@ -21,6 +21,19 @@ const auth = firebase.auth();
 
 
 
+//=====================================Listining for auth Status Changes=====================================//
+
+auth.onAuthStateChanged(users => {
+    if (users) {
+        console.log(users)
+
+    }
+    else {
+        console.log('out')
+    }
+})
+
+
 //=============================================Getting Refrences Here=============================================//
 const signupForm = document.querySelector('#signupForm');
 const logForm = document.querySelector('#LoginForm');
@@ -46,7 +59,7 @@ signupForm.addEventListener('submit', (e) => {
 
     // validating the form here
     if (signEmail === '' || signPass === '') {
-        alertMessage('Please Enter Complete Details..!', 'alert-danger');
+        alertMessage2('Please Enter Complete Details..!', 'alert-danger');
     }
     else {
 
@@ -55,14 +68,14 @@ signupForm.addEventListener('submit', (e) => {
         // creating account in firebase now
         auth.createUserWithEmailAndPassword(signEmail, signPass)
             .then(res => {
-                alertMessage('User Registered..!', 'alert-success')
+                alertMessage2('User Registered..!', 'alert-success')
 
                 // loading the window
                 setTimeout(() => {
                     location.assign('index.html');
                 }, 3000);
             })
-            .catch(rej => alertMessage(rej.message, 'alert-danger'));
+            .catch(rej => alertMessage2(rej.message, 'alert-danger'));
 
     }
 
@@ -103,7 +116,8 @@ logForm.addEventListener('submit', (e) => {
 signOut.addEventListener('click', (e) => {
     auth.signOut()
         .then(res => alert('Logout Successful..!'))
-        .catch(rej => console.log(rej))
+        .catch(rej => console.log)
+    console.log('1')
 })
 
 
@@ -112,6 +126,30 @@ const alertMessage = (txt, cls) => {
 
     // getting the parent reference here
     const parent = document.querySelector('#alertMessage');
+
+    // creating para here
+    const parag = document.createElement('p');
+
+    // adding class here
+    parag.className = `text-center alert ${cls}`;
+
+    // adding text content
+    parag.textContent = txt;
+
+    // appending para here
+    parent.appendChild(parag);
+
+
+    // removing the class here
+    setTimeout(() => {
+        document.querySelector('.alert').remove()
+    }, 2500);
+}
+
+const alertMessage2 = (txt, cls) => {
+
+    // getting the parent reference here
+    const parent = document.querySelector('#alertMessage2');
 
     // creating para here
     const parag = document.createElement('p');
