@@ -169,3 +169,9 @@ const alertMessage2 = (txt, cls) => {
         document.querySelector('.alert').remove()
     }, 2500);
 }
+
+
+//================================Database Settings Here===========================================//
+
+// getting data here
+db.collection('Donors').get().then(data => printData(data.docs));
