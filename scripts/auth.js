@@ -24,12 +24,11 @@ const auth = firebase.auth();
 //=============================================Getting Refrences Here=============================================//
 const signupForm = document.querySelector('#signupForm');
 const logForm = document.querySelector('#LoginForm');
-const logEmail = document.querySelector('#loginEmail');
-const logPass = document.querySelector('#loginPass');
+const lgEmail = document.querySelector('#loginEmail');
+const lgPass = document.querySelector('#loginPass');
 const sigEmail = document.querySelector('#signupEmail');
 const sigPass = document.querySelector('#signupPass');
 const donarRes = document.querySelector('#results');
-
 
 
 
@@ -41,8 +40,8 @@ signupForm.addEventListener('submit', (e) => {
 
 
     // getting the input values here
-    var signEmail = document.querySelector('#signupEmail').value;
-    var signPass = document.querySelector('#signupPass').value;
+    var signEmail = sigEmail.value;
+    var signPass = sigPass.value;
 
     // validating the form here
     if (signEmail === '' || signPass === '') {
@@ -72,12 +71,41 @@ signupForm.addEventListener('submit', (e) => {
 
 
 
+
+// =======================================Event Listener for SignIn=======================================//
+logForm.addEventListener('submit', (e) => {
+
+    // preventing default behaviour here
+    e.preventDefault();
+
+    // getting the input values here
+    var logEmail = lgEmail.value;
+    var logPass = lgPass.value;
+
+    if (logEmail === '' || logPass === '') {
+        alertMessage('Please Complete detials first..!','alert-danger');
+    }
+    else {
+        auth.signInWithEmailAndPassword(logEmail, logPass)
+            .then(res => alertMessage('Donor SignedIn..!', 'alert-success'))
+            .catch(rej => alertMessage(rej.message, 'alert-danger'))
+
+
+    }
+})
+
+
+
+
+// =======================================Event Listener for SignOut=======================================//
+
+
+
 // ==================================Alerting for the Authentication Message======================================//
 const alertMessage = (txt, cls) => {
 
     // getting the parent reference here
     const parent = document.querySelector('#alertMessage');
-    const parent1 = document.querySelector('#alertMessage1');
 
     // creating para here
     const parag = document.createElement('p');
