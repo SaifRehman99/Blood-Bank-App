@@ -28,6 +28,7 @@ const lgEmail = document.querySelector('#loginEmail');
 const lgPass = document.querySelector('#loginPass');
 const sigEmail = document.querySelector('#signupEmail');
 const sigPass = document.querySelector('#signupPass');
+const signOut = document.querySelector('#logOut');
 const donarRes = document.querySelector('#results');
 
 
@@ -83,7 +84,7 @@ logForm.addEventListener('submit', (e) => {
     var logPass = lgPass.value;
 
     if (logEmail === '' || logPass === '') {
-        alertMessage('Please Complete detials first..!','alert-danger');
+        alertMessage('Please Complete detials first..!', 'alert-danger');
     }
     else {
         auth.signInWithEmailAndPassword(logEmail, logPass)
@@ -99,6 +100,11 @@ logForm.addEventListener('submit', (e) => {
 
 // =======================================Event Listener for SignOut=======================================//
 
+signOut.addEventListener('click', (e) => {
+    auth.signOut()
+        .then(res => alert('Logout Successful..!'))
+        .catch(rej => console.log(rej))
+})
 
 
 // ==================================Alerting for the Authentication Message======================================//
