@@ -169,18 +169,38 @@ donorForm.addEventListener('submit', (e) => {
     }
     else {
 
+        db.collection('Donors').add({
+            Name,
+            Address,
+            Phone,
+            BloodGroup,
 
-        // adding the alert here
-        const par = document.querySelector('#donorAlert');
-        const txt = document.createElement('p');
-        txt.textContent = 'Donar Added..!'
-        txt.className = 'text-center alert alert-success'
-        par.appendChild(txt);
+        }).then(() => {
 
-        setTimeout(() => {
-            document.querySelector('.alert').remove();
-        }, 1700);
+            // adding the alert here
+            const par = document.querySelector('#donorAlert');
+            const txt = document.createElement('p');
+            txt.textContent = 'Donar Added..!'
+            txt.className = 'text-center alert alert-success'
+            par.appendChild(txt);
 
+            setTimeout(() => {
+                document.querySelector('.alert').remove();
+            }, 1700);
+
+        })
+            .catch(() => {
+                // adding the alert here
+                const par = document.querySelector('#donorAlert');
+                const txt = document.createElement('p');
+                txt.textContent = 'Donar Adding Failed..!'
+                txt.className = 'text-center alert alert-danger'
+                par.appendChild(txt);
+
+                setTimeout(() => {
+                    document.querySelector('.alert').remove();
+                }, 1700);
+            })
     }
 
 })
