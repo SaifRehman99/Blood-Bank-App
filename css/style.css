@@ -40,23 +40,23 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-
 /* Setting card images here */
-.card img{
+
+.card img {
     height: 200px;
 }
 
 /* displaying all the elements none */
-.lginn , .lggout{
+
+.lginn, .lggout {
     display: none
 }
 
-
 /* setting the images icon in add donor modal */
+
 .modal img {
     height: 22px !important;
 }
-
 
 /* ===============Media query from small phones====================== */
 
