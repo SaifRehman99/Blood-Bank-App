@@ -22,3 +22,17 @@ const printData = (data) => {
     })
     resultDiv.innerHTML = output;
 }
+
+// animation here
+
+const mainText = document.querySelector('.introSection');
+const init = () => {
+    setTimeout(() => {
+        mainText.style.display = 'block';
+        mainText.style.opacity = 1;
+        
+    }, 1400);
+
+}
+
+init()
