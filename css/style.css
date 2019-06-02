@@ -40,6 +40,13 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+
+/* Setting card images here */
+.card img{
+    height: 200px;
+}
+
+
 /* ===============Media query from small phones====================== */
 
 @media only screen and (max-width:500px) {
