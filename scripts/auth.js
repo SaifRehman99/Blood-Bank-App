@@ -36,7 +36,7 @@ auth.onAuthStateChanged(users => {
         document.querySelector('#logOut').style.display = 'inline-block';
         document.querySelector('#lgin').style.display = 'none';
         document.querySelector('#sngup').style.display = 'none';
-        
+
     }
     else {
         db.collection('Donors').get().then(data => printData([]));
