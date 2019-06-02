@@ -11,7 +11,7 @@ const printData = (data) => {
         id++;
         let listData = item.data()
         output += `
-          <tr class="table-success">
+          <tr class="table table-bordered">
           <td>${id}</td>
             <td>${listData.Name}</td>
             <td>${listData.Address}</td>
