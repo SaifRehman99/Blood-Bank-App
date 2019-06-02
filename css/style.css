@@ -49,7 +49,12 @@ body {
 /* displaying all the elements none */
 .lginn , .lggout{
     display: none
+}
 
+
+/* setting the images icon in add donor modal */
+#addDonar img {
+    height: 22px !important;
 }
 
 
