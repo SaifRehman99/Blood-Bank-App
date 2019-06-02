@@ -20,5 +20,5 @@ const printData = (data) => {
             <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donarDetails">Details</button></td>
           </tr>`
     })
-    resultDiv.innerHTML = output
+    resultDiv.innerHTML = output;
 }

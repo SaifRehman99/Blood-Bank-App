@@ -57,7 +57,7 @@ const lgPass = document.querySelector('#loginPass');
 const sigEmail = document.querySelector('#signupEmail');
 const sigPass = document.querySelector('#signupPass');
 const signOut = document.querySelector('#logOut');
-const donarRes = document.querySelector('#results');
+const donorForm = document.querySelector('#addingDonors');
 
 
 
@@ -140,6 +140,56 @@ signOut.addEventListener('click', (e) => {
         .catch(rej => console.log)
     console.log('1')
 })
+
+
+
+
+// ==================================Adding Donor======================================//
+donorForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // getting the form values here
+    let Name = document.querySelector('#name').value;
+    let Address = document.querySelector('#add').value;
+    let Phone = document.querySelector('#num').value;
+    let BloodGroup = document.querySelector('#blood').value;
+
+    if (Name === '' || Address === '' || Phone === '' || BloodGroup === '') {
+        // adding the alert here
+        const par = document.querySelector('#donorAlert');
+        const txt = document.createElement('p');
+        txt.textContent = 'Enter Complete Details..!'
+        txt.className = 'text-center alert alert-danger'
+        par.appendChild(txt);
+
+        setTimeout(() => {
+            document.querySelector('.alert').remove();
+        }, 1700);
+
+    }
+    else {
+
+
+        // adding the alert here
+        const par = document.querySelector('#donorAlert');
+        const txt = document.createElement('p');
+        txt.textContent = 'Donar Added..!'
+        txt.className = 'text-center alert alert-success'
+        par.appendChild(txt);
+
+        setTimeout(() => {
+            document.querySelector('.alert').remove();
+        }, 1700);
+
+    }
+
+})
+
+
+
+
+
+
 
 
 // ==================================Alerting for the Authentication Message======================================//
