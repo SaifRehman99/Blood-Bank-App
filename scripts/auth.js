@@ -25,11 +25,19 @@ const auth = firebase.auth();
 
 auth.onAuthStateChanged(users => {
     if (users) {
-        console.log(users)
+        //if login t view all the things
+
+        //================================Database Settings Here===========================================//
+
+        // getting data here
+        db.collection('Donors').get().then(data => printData(data.docs));
+        document.querySelector('.introSection').style.display = 'none';
 
     }
     else {
-        console.log('out')
+        db.collection('Donors').get().then(data => printData([]));
+        document.querySelector('.introSection').style.display = 'block';
+        document.querySelector('.donarDetailsHere').style.display = 'none';
     }
 })
 
@@ -101,7 +109,12 @@ logForm.addEventListener('submit', (e) => {
     }
     else {
         auth.signInWithEmailAndPassword(logEmail, logPass)
-            .then(res => alertMessage('Donor SignedIn..!', 'alert-success'))
+            .then(res => {
+                alertMessage('Donor SignedIn..!', 'alert-success')
+                setTimeout(() => {
+                    window.location('/index.html');
+                }, 1700);
+            })
             .catch(rej => alertMessage(rej.message, 'alert-danger'))
 
 
@@ -115,7 +128,8 @@ logForm.addEventListener('submit', (e) => {
 
 signOut.addEventListener('click', (e) => {
     auth.signOut()
-        .then(res => alert('Logout Successful..!'))
+        .then(res =>
+            alert('Logout Successful..!'))
         .catch(rej => console.log)
     console.log('1')
 })
@@ -169,9 +183,3 @@ const alertMessage2 = (txt, cls) => {
         document.querySelector('.alert').remove()
     }, 2500);
 }
-
-
-//================================Database Settings Here===========================================//
-
-// getting data here
-db.collection('Donors').get().then(data => printData(data.docs));

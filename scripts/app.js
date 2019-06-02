@@ -8,16 +8,16 @@ const printData = (data) => {
     var id = 0;
 
     data.forEach((item) => {
-        id++
+        id++;
         let listData = item.data()
         output += `
-          <tr>
+          <tr class="table-success">
           <td>${id}</td>
             <td>${listData.Name}</td>
             <td>${listData.Address}</td>
             <td>${listData.Phone}</td>
             <td>${listData.BloodGroup}</td>
-            <td><button class = 'btn btn-success' id='donarDetails'>Details</button></td>
+            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donarDetails">Details</button></td>
           </tr>`
     })
     resultDiv.innerHTML = output
