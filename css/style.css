@@ -53,7 +53,7 @@ body {
 
 
 /* setting the images icon in add donor modal */
-#addDonar img {
+.modal img {
     height: 22px !important;
 }
 
