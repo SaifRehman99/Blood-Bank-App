@@ -17,18 +17,30 @@ const printData = (data) => {
             <td>${listData.Address}</td>
             <td>${listData.Phone}</td>
             <td>${listData.BloodGroup}</td>
-            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donarDetails">Details</button></td>
+            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donarDetails" id="getDetails">Details</button></td>
           </tr>`
     })
     resultDiv.innerHTML = output;
 }
 
-// animation here
 
+
+// getting the tapped result of donor here
+const getDataDonor = document.querySelector('#results');
+
+// adding listener here using event delegation here
+getDataDonor.addEventListener('click',(e)=>{
+    if(e.target.classList.contains('btn')){
+        console.log('milgaya')
+    }
+
+})
+
+// animation here
 const mainText = document.querySelector('.introSection');
 const init = () => {
     setTimeout(() => {
-        mainText.style.display = 'block';
+        // mainText.style.display = 'block';
         mainText.style.opacity = 1;
         
     }, 1400);
