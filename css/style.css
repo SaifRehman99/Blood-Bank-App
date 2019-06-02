@@ -46,6 +46,12 @@ body {
     height: 200px;
 }
 
+/* displaying all the elements none */
+.lginn , .lggout{
+    display: none
+
+}
+
 
 /* ===============Media query from small phones====================== */
 
