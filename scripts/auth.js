@@ -32,6 +32,7 @@ auth.onAuthStateChanged(users => {
         // getting data here
         db.collection('Donors').get().then(data => printData(data.docs));
         document.querySelector('.introSection').style.display = 'none';
+        document.querySelector('.donarDetailsHere').style.display = 'block';
 
     }
     else {
