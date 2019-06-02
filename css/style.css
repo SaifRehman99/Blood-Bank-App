@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("/img/1.jpg");
+    background-image: url("/img/2.jpg");
     /* The image used */
     background-color: lightcoral;
     /* Used if the image is unavailable */
@@ -18,6 +18,50 @@ body {
     /* Do not repeat the image */
     background-size: cover;
     /* Resize the background image to cover the entire container */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+/* loader here */
+/* .loader{
+    height: 30px;
+    transform-origin: bottom center;
+    animation: rotate 3s linear infinite;
+}
+.circle{
+    display: inline-block;
+    background-color: red;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    margin: -10px;
+}
+.circle:nth-child(2){
+    background-color: green;
+    animation-delay: 0.75s;
+} */
+
+/* adding key fram to the rotation */
+/* @keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    50%{
+        transform:scale(1)
+    }
+} */
+
+.introSection{
+    opacity: 0;
+    display:none;
+    transition: opacity 3s ease-in
 }
 
 .para {
