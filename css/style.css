@@ -6,11 +6,11 @@
 }
 
 body {
-    background-image: url("/img/2.jpg");
+    background-image: url("/img/3.jpg");
     /* The image used */
     background-color: lightcoral;
     /* Used if the image is unavailable */
-    max-height: 100%;
+    min-height: 100vh;
     /* You must set a specified height */
     background-position: center;
     /* Center the image */
@@ -87,7 +87,7 @@ body {
 /* Setting card images here */
 
 .card img {
-    height: 200px;
+    height: 250px;
 }
 
 /* displaying all the elements none */
