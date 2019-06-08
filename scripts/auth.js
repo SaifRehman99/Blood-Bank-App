@@ -31,7 +31,7 @@ auth.onAuthStateChanged(users => {
 
         // getting data here
         // using onspanshot here for the realtime listeners
-        db.collection('Donors').onSnapshot(data => printData(data.docs));
+        db.collection('Donors').orderBy('Name').onSnapshot(data => printData(data.docs));
         document.querySelector('.introSection').style.display = 'none';
         document.querySelector('.donarDetailsHere').style.display = 'block';
         document.querySelector('#logOut').style.display = 'inline-block';
