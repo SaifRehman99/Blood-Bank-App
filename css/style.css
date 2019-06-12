@@ -3,6 +3,7 @@
     padding: 0%;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
     /* The image used */
     background-color: lightcoral;
     /* Used if the image is unavailable */
-    min-height: 100vh;
+    max-height: 100%;
     /* Resize the background image to cover the entire container */
     /* display: flex;
     justify-content: center;
@@ -129,5 +130,22 @@ body {
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+
+/* for blood groups card */
+@media only screen and (max-width:600px){
+    .card{
+        width: 300px;
+    }
+}
+
+
+/* for table section */
+@media only screen and (max-width:700px){
+    .donor-table{
+        max-width: 10px !important;
+
     }
 }
