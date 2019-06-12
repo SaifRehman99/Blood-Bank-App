@@ -33,7 +33,7 @@ auth.onAuthStateChanged(users => {
         // using onspanshot here for the realtime listeners
         db.collection('Donors').orderBy('Name').onSnapshot(data => printData(data.docs));
         document.querySelector('.introSection').style.display = 'none';
-        document.querySelector('.donarDetailsHere').style.display = 'block';
+        // document.querySelector('.donarDetailsHere').style.display = 'block';
         document.querySelector('#logOut').style.display = 'inline-block';
         document.querySelector('#lgin').style.display = 'none';
         document.querySelector('#sngup').style.display = 'none';
@@ -42,7 +42,7 @@ auth.onAuthStateChanged(users => {
     else {
         db.collection('Donors').get().then(data => printData([]));
         document.querySelector('.introSection').style.display = 'block';
-        document.querySelector('.donarDetailsHere').style.display = 'none';
+        // document.querySelector('.donarDetailsHere').style.display = 'none';
         document.querySelector('#logOut').style.display = 'none';
         document.querySelector('#lgin').style.display = 'inline-block';
         document.querySelector('#sngup').style.display = 'inline-block';
@@ -91,6 +91,10 @@ signupForm.addEventListener('submit', (e) => {
                     $('#SignUpModal').modal('toggle');
                     // window.location('/index.html');
                 }, 1500);
+
+                // clearing input fields here
+                sigEmail.value = '';
+                sigPass.value = '';
             })
             .catch(rej => alertMessage2(rej.message, 'alert-danger'));
 
@@ -124,6 +128,10 @@ logForm.addEventListener('submit', (e) => {
                     $('#LoginModal').modal('toggle');
                     // window.location('/index.html');
                 }, 1500);
+
+                // clearing values here
+                lgEmail.value = '';
+                lgPass.value = ''
             })
             .catch(rej => alertMessage(rej.message, 'alert-danger'))
 
@@ -169,6 +177,7 @@ donorForm.addEventListener('submit', (e) => {
             document.querySelector('.alert').remove();
         }, 1700);
 
+
     }
     else {
 
@@ -189,9 +198,13 @@ donorForm.addEventListener('submit', (e) => {
 
             setTimeout(() => {
                 document.querySelector('.alert').remove();
-                    $('#addDonar').modal('toggle');
+                $('#addDonar').modal('toggle');
             }, 1700);
 
+            document.querySelector('#name').value = '';
+            document.querySelector('#add').value = '';
+            document.querySelector('#num').value = '';
+            document.querySelector('#blood').value = '';
         })
             .catch(() => {
                 // adding the alert here
