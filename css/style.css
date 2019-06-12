@@ -25,6 +25,7 @@ body {
 }
 
 /* loader here */
+
 /* .loader{
     height: 30px;
     transform-origin: bottom center;
@@ -46,6 +47,7 @@ body {
 } */
 
 /* adding key fram to the rotation */
+
 /* @keyframes rotate {
     to{
         transform: rotate(360deg);
@@ -58,9 +60,9 @@ body {
     }
 } */
 
-.introSection{
+.introSection {
     opacity: 0;
-    display:none;
+    display: none;
     transition: opacity 3s ease-in
 }
 

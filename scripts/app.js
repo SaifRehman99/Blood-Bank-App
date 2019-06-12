@@ -37,26 +37,26 @@ getDataDonor.addEventListener('click', (e) => {
         // getting the clicked item id here
         let element = e.target.parentElement.parentElement;
         console.log(element)
-    //     let element = document.querySelector('#uniqueID');
+        //     let element = document.querySelector('#uniqueID');
 
-    //     const makingArray = (element) => {
-    //         // making siblings array list here
-    //         let siblings = [];
-    //         let sibling = element.parentNode.firstChild;
+        //     const makingArray = (element) => {
+        //         // making siblings array list here
+        //         let siblings = [];
+        //         let sibling = element.parentNode.firstChild;
 
-    //         // Loop through each sibling and push to the array
-    //         while (sibling) {
-    //             if (sibling.nodeType === 1 && sibling !== element) {
-    //                 siblings.push(sibling);
-    //             }
-    //             sibling = sibling.innerHTML;
-    //         }
+        //         // Loop through each sibling and push to the array
+        //         while (sibling) {
+        //             if (sibling.nodeType === 1 && sibling !== element) {
+        //                 siblings.push(sibling);
+        //             }
+        //             sibling = sibling.innerHTML;
+        //         }
 
-    //         return siblings;
-    //     }
+        //         return siblings;
+        //     }
 
-    //     console.log(makingArray(element))
-    // }
+        //     console.log(makingArray(element))
+        // }
     }
 })
 
