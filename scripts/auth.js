@@ -88,7 +88,7 @@ signupForm.addEventListener('submit', (e) => {
 
                 // loading the window
                 setTimeout(() => {
-                    $('.modal').modal('toggle');
+                    $('#SignUpModal').modal('toggle');
                     // window.location('/index.html');
                 }, 1500);
             })
@@ -121,7 +121,7 @@ logForm.addEventListener('submit', (e) => {
             .then(res => {
                 alertMessage('Donor SignedIn..!', 'alert-success')
                 setTimeout(() => {
-                    $('.modal').modal('toggle');
+                    $('#LoginModal').modal('toggle');
                     // window.location('/index.html');
                 }, 1500);
             })
@@ -189,6 +189,7 @@ donorForm.addEventListener('submit', (e) => {
 
             setTimeout(() => {
                 document.querySelector('.alert').remove();
+                    $('#addDonar').modal('toggle');
             }, 1700);
 
         })
