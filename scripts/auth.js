@@ -40,7 +40,7 @@ auth.onAuthStateChanged(users => {
 
     }
     else {
-        db.collection('Donors').get().then(data => printData([]));
+        db.collection('Donors').get().then(data => printData(data.docs));
         document.querySelector('.introSection').style.display = 'block';
         // document.querySelector('.donarDetailsHere').style.display = 'none';
         document.querySelector('#logOut').style.display = 'none';
@@ -216,6 +216,7 @@ donorForm.addEventListener('submit', (e) => {
 
                 setTimeout(() => {
                     document.querySelector('.alert').remove();
+                    $('#addDonar').modal('toggle');
                 }, 1700);
             })
     }
