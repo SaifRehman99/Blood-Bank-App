@@ -11,7 +11,7 @@ body {
     /* The image used */
     background-color: lightcoral;
     /* Used if the image is unavailable */
-    max-height: 100%;
+    max-height: 100vh;
     /* Resize the background image to cover the entire container */
     /* display: flex;
     justify-content: center;
@@ -133,19 +133,18 @@ body {
     }
 }
 
-
 /* for blood groups card */
-@media only screen and (max-width:600px){
-    .card{
+
+@media only screen and (max-width:600px) {
+    .card {
         width: 300px;
     }
 }
 
-
 /* for table section */
-@media only screen and (max-width:700px){
-    .donor-table{
-        max-width: 10px !important;
 
+@media only screen and (max-width:700px) {
+    .donor-table {
+        max-width: 10px !important;
     }
 }
